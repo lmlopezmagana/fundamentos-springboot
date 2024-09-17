@@ -18,7 +18,7 @@ public class MainDeMentira {
     //private MiServicio miServicio;
 
     @Autowired
-    @Qualifier("fileQuery")
+    @Qualifier("apiQuery")
     private Query query;
 
     @PostConstruct
