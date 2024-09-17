@@ -9,12 +9,17 @@ public class MiServicio {
     //@Autowired
     private /*final*/ MiRepositorio miRepositorio;
 
-    @Autowired
+    /*@Autowired
     public MiServicio(MiRepositorio miRepositorio) {
         this.miRepositorio = miRepositorio;
     }
 
     public MiServicio() {
+    }*/
+
+    @Autowired
+    public void setMiRepositorio(MiRepositorio miRepositorio) {
+        this.miRepositorio = miRepositorio;
     }
 
     public void ejecutar() {
