@@ -1,6 +1,7 @@
 package com.openwebinars.demo;
 
 import com.openwebinars.demo.autowired.MiServicio;
+import com.openwebinars.demo.beans.Query;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -12,8 +13,11 @@ public class MainDeMentira {
     @Autowired
     private ApplicationContext ctx;
 
+    //@Autowired
+    //private MiServicio miServicio;
+
     @Autowired
-    private MiServicio miServicio;
+    private Query query;
 
     @PostConstruct
     public void init() {
@@ -22,7 +26,9 @@ public class MainDeMentira {
             System.out.println(">>> "+ s);
         }*/
 
-        miServicio.ejecutar();
+        //miServicio.ejecutar();
+
+        System.out.println(query.fetchData());
 
     }
 
