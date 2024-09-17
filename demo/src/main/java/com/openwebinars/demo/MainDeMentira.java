@@ -6,6 +6,7 @@ import com.openwebinars.demo.scope.Servicio1;
 import com.openwebinars.demo.scope.Servicio2;
 import com.openwebinars.demo.scope.Servicio3;
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
@@ -49,6 +50,11 @@ public class MainDeMentira {
 
        // System.out.println(query.fetchData());
 
+    }
+
+    @PreDestroy
+    public void dispose() {
+        System.out.println("Este bean se va a eliminar...");
     }
 
 }
