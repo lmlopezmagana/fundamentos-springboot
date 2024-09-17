@@ -6,8 +6,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class MiServicio {
 
+    //@Autowired
+    private /*final*/ MiRepositorio miRepositorio;
+
     @Autowired
-    private MiRepositorio miRepositorio;
+    public MiServicio(MiRepositorio miRepositorio) {
+        this.miRepositorio = miRepositorio;
+    }
+
+    public MiServicio() {
+    }
 
     public void ejecutar() {
         miRepositorio.realizarOperacion();
