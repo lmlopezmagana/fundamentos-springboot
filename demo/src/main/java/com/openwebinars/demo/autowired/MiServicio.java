@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class MiServicio {
 
-    //@Autowired
+    @Autowired
     private /*final*/ MiRepositorio miRepositorio;
     private DataUtils dataUtils;
 
