@@ -12,6 +12,9 @@ public class MiServicio {
     @Autowired(required = false)
     private DataUtils dataUtils;
 
+    @Autowired
+    private DataReader dataReader;
+
     /*@Autowired
     public MiServicio(MiRepositorio miRepositorio) {
         this.miRepositorio = miRepositorio;
@@ -33,6 +36,7 @@ public class MiServicio {
 
     public void ejecutar() {
         miRepositorio.realizarOperacion();
+        System.out.println(dataReader.readData());
     }
 
 
