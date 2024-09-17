@@ -8,6 +8,8 @@ public class MiServicio {
 
     @Autowired
     private /*final*/ MiRepositorio miRepositorio;
+
+    @Autowired(required = false)
     private DataUtils dataUtils;
 
     /*@Autowired
@@ -23,11 +25,11 @@ public class MiServicio {
         this.miRepositorio = miRepositorio;
     }*/
 
-    @Autowired
+    /*@Autowired
     public void prepare(MiRepositorio miRepositorio, DataUtils dataUtils) {
         this.miRepositorio = miRepositorio;
         this.dataUtils = dataUtils;
-    }
+    }*/
 
     public void ejecutar() {
         miRepositorio.realizarOperacion();
