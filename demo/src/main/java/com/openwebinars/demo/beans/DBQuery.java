@@ -5,8 +5,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Primary
-@Component
+//@Primary
+//@Component
 public class DBQuery implements Query{
     @Override
     public List<String> fetchData() {
