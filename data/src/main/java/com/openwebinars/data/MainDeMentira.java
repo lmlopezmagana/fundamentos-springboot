@@ -18,6 +18,9 @@ public class MainDeMentira {
 
         repo.save(p);
 
+        repo.findAll()
+                .forEach(System.out::println);
+
 
     }
 

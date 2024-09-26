@@ -1,0 +1,1 @@
+insert into producto (id, nombre, precio) values (NEXTVAL('producto_seq'), 'Otro producto', 23.45);
